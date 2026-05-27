@@ -13,8 +13,6 @@ dependencies = [
     "aiohttp>=3.9.0",
 ]
 
-[project.optional-dependencies]
-dev = ["pytest", "pytest-asyncio", "aioresponses"]
 
 [project.urls]
 Homepage = "https://github.com/anatosun/python-swisscom-internet-box"

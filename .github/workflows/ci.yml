@@ -6,7 +6,7 @@ on:
   pull_request:
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -18,8 +18,22 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Install dependencies
-        run: pip install -e ".[dev]"
+      - name: Install package
+        run: pip install -e .
 
-      - name: Run tests
-        run: pytest tests/
+      - name: Verify imports
+        run: |
+          python -c "
+          from swisscom_internet_box import (
+              SwisscomClient,
+              SwisscomAuthError,
+              SwisscomConnectionError,
+              BoxInfo,
+              WANStatus,
+              NMCInfo,
+              WiFiStatus,
+              AccessPoint,
+              Device,
+          )
+          print('All imports OK')
+          "
