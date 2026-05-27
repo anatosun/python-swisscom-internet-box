@@ -1,0 +1,10 @@
+pyproject.toml
+python_swisscom_internet_box.egg-info/PKG-INFO
+python_swisscom_internet_box.egg-info/SOURCES.txt
+python_swisscom_internet_box.egg-info/dependency_links.txt
+python_swisscom_internet_box.egg-info/requires.txt
+python_swisscom_internet_box.egg-info/top_level.txt
+swisscom_internet_box/__init__.py
+swisscom_internet_box/client.py
+swisscom_internet_box/exceptions.py
+swisscom_internet_box/models.py
